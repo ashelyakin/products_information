@@ -1,0 +1,55 @@
+{
+    "items":[
+    {
+        "id": 1,
+        "name": "Windows 10",
+        "image": "windows10",
+        "description": "Windows 10 — операционная система для персональных компьютеров и рабочих станций, разработанная корпорацией Microsoft в рамках семейства Windows NT. После Windows 8.1 система получила номер 10, минуя 9. Серверный аналог Windows 10 — Windows Server 2016.",
+        "reference": "https://www.microsoft.com"
+    },
+    {
+        "id": 2,
+        "name": "Ubuntu",
+        "image": "ubuntu",
+        "description": "Ubuntu — операционная система, основанная на Debian GNU/Linux. Основным разработчиком и спонсором является компания Canonical. В настоящее время проект активно развивается и поддерживается свободным сообществом.",
+        "reference": "https://ubuntu.com/"
+    },
+    {
+        "id": 3,
+        "name": "Adobe Photoshop",
+        "image": "ph",
+        "description": "Adobe Photoshop — многофункциональный графический редактор, разработанный и распространяемый фирмой Adobe Systems. В основном работает с растровыми изображениями, однако имеет некоторые векторные инструменты.",
+        "reference": "https://www.adobe.com"
+    },
+    {
+        "id": 4,
+        "name": "Android Studio",
+        "image": "as",
+        "description": "Android Studio — это интегрированная среда разработки для работы с платформой Android, анонсированная 16 мая 2013 года на конференции Google I/O.",
+        "reference": "https://developer.android.com"
+    },
+    {
+        "id": 5,
+        "name": "IBExpert",
+        "image": "ib",
+        "description": "IBExpert — GUI-оболочка, предназначенная для разработки и администрирования баз данных InterBase и Firebird, а также для выбора и изменения данных, хранящихся в базах. ",
+        "reference": "https://www.ibexpert.net"
+    },
+    {
+        "id": 6,
+        "name": "ESET NOD32",
+        "image": "eset",
+        "description": "ESET NOD32 — антивирусный пакет, выпускаемый словацкой фирмой ESET. Первая версия была выпущена в конце 1987 года. Название изначально расшифровывалось как «Nemocnica na Okraji Disku». ESET NOD32 — это комплексное антивирусное решение для защиты в реальном времени.",
+        "reference": "https://www.eset.com/"
+    },
+    {
+        "id": 7,
+        "name": "Discord",
+        "image": "discord",
+        "description": "Discord — бесплатный мессенджер с поддержкой VoIP и видеоконференций, изначально ориентированный на пользователей компьютерных игр. Разработчик — компания Hammer & Chisel из Сан-Франциско.",
+        "reference": "https://discordapp.com/"
+    }
+
+]
+}
+
