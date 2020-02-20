@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/a582fa6f5ec25b4ebdf31a91e28d5f0d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/0caff82a521f23cece9f1e5f9e25e861/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.2.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/5c0b176cf64176185927dfcfaeff776b/jetified-core-ktx-1.2.0/AndroidManifest.xml:2:1-9:12
@@ -36,25 +36,25 @@ MERGED from [androidx.print:print:1.0.0] /home/andrew/.gradle/caches/transforms-
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/f4a193b1a276be068b4456f76f1d9b3b/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/8ac534f7c05da7c0171fdbd7104f80bd/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/37d850288f46f406dcc61b14878a80f8/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
-		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
-		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-21:12
+		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:5:5-19:19
+ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:5:5-21:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/andrew/.gradle/caches/transforms-2/files-2.1/96cdaff78c50e61d15d0649ac640ca88/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/andrew/.gradle/caches/transforms-2/files-2.1/96cdaff78c50e61d15d0649ac640ca88/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.2.0] /home/andrew/.gradle/caches/transforms-2/files-2.1/4aafda5be1f4dfcf5232a4a3a673ee23/core-1.2.0/AndroidManifest.xml:24:5-89
@@ -89,6 +89,14 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.products.DescriptionActivity
+ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:19:9-56
+	android:name
+		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:19:19-54
+activity#com.example.products.AboutActivity
+ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:20:9-50
+	android:name
+		ADDED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml:20:19-48
 uses-sdk
 INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/andrew/Рабочий стол/products/app/src/main/AndroidManifest.xml
