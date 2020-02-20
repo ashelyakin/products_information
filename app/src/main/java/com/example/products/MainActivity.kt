@@ -106,7 +106,8 @@ class MainActivity : AppCompatActivity() {
                 i.putExtra("desc", item.description)
                 i.putExtra("img", item.image)
                 i.putExtra("ref", item.reference)
-                startActivity(itemView.context, i, savedInstanceState)
+                itemView.context.startActivity(i)
+                //startActivity(itemView.context, i, savedInstanceState)
             }
 
         }

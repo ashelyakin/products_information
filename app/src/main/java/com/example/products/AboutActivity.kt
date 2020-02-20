@@ -20,6 +20,13 @@ class AboutActivity: AppCompatActivity(){
         findViewById<TextView>(R.id.item_name).text = name
         findViewById<TextView>(R.id.item_ref).text = ref
         Picasso.with(this).load(img.toInt()).into(findViewById<ImageView>(R.id.item_image))
+
+        val btnRef = findViewById<TextView>(R.id.item_ref)
+        btnRef.setOnClickListener {
+            val dialog = AboutDialog(ref)
+            val manager = supportFragmentManager
+            dialog.show(manager,"dialogAbout")
+        }
     }
 
     override fun onResume() {
