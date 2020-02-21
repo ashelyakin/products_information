@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.squareup.picasso.Picasso
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -23,6 +22,7 @@ class DescriptionActivity: AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_description)
 
+        //получаем инфу из прошлого активити и заполняем поля
         name = intent.getStringExtra("name")
         id = intent.getStringExtra("id")
         desc = intent.getStringExtra("desc")
@@ -32,23 +32,25 @@ class DescriptionActivity: AppCompatActivity()  {
         findViewById<TextView>(R.id.item_id).text = id
         findViewById<TextView>(R.id.item_description).text = desc
         Picasso.with(this).load(img.toInt()).into(findViewById<ImageView>(R.id.item_image))
-        //vImg.setImageResource(item.image.toInt())
-
     }
 
+    //кнопка Up
     override fun onResume() {
         super.onResume()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
+    //кнопка "О компании"
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_desc, menu)
         return super.onCreateOptionsMenu(menu)
 
     }
 
+    //обработка нажатий
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
+            //на кнопку "О компании"
             R.id.about -> {
                 val i = Intent(this, AboutActivity::class.java)
                 i.putExtra("name", name)
@@ -56,6 +58,7 @@ class DescriptionActivity: AppCompatActivity()  {
                 i.putExtra("ref", ref)
                 startActivity(i)
             }
+            //на кнопку Up
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)

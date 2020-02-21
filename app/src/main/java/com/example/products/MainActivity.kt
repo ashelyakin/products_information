@@ -1,23 +1,14 @@
 package com.example.products
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivities
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
 import java.io.BufferedReader
-import java.io.File
 import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         vRecView = findViewById<RecyclerView>(R.id.mainAct_recView)
-        val br = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.products_info)))
 
+        //читаем содержимое .json и записываем в sb как строку
+        val br = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.products_info)))
         var line = br.readLine()
         val sb = StringBuilder()
         while (line!=null)
@@ -37,26 +29,29 @@ class MainActivity : AppCompatActivity() {
             sb.append(line)
             line = br.readLine()
         }
+
+        //парсим sb, получаем экземпляр специально созданного класса Products
         var prods = Gson().fromJson(sb.toString(), Products::class.java)
+
+        //конвертируем строковое представление ресурса, в котором содержится изображение для продукта, в id этого ресурса
+        //и сохраняем как строку
         for (x in prods.items)
         {
             x.image = resources.getIdentifier(x.image, "drawable", applicationContext.packageName).toString()
         }
+
+        //назначаем адаптер и layout manager для нашего RecyclerView
         vRecView.adapter = RecAdapter(prods.items, savedInstanceState)
         vRecView.layoutManager = LinearLayoutManager(this)
 
-        /*val i = Intent(this, AboutActivity::class.java)
-        i.putExtra("name", prods.items[0].name)
-        i.putExtra("img", prods.items[0].image)
-        i.putExtra("ref", prods.items[0].reference)
-        startActivity(i)*/
     }
 
-
+    //класс для хранения информации из .json
     class Products(
         val items: ArrayList<ProductItem> = ArrayList<ProductItem>()
     )
 
+    //для Products
     class ProductItem(
         val id: Int,
         val name: String,
@@ -65,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         val reference: String
     )
 
+    //адаптер для нашего RecyclerView
     class RecAdapter(val items: ArrayList<ProductItem>, val savedInstanceState: Bundle?) : RecyclerView.Adapter<RecHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecHolder {
@@ -91,14 +87,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //холдер для адаптера
     class RecHolder(view: View, val savedInstanceState: Bundle?) : RecyclerView.ViewHolder(view) {
 
         fun bind(item: ProductItem) {
+            //заполняем поля
             val vName = itemView.findViewById<TextView>(R.id.item_name)
             val vId = itemView.findViewById<TextView>(R.id.item_id)
             vName.text = item.name
             vId.text = item.id.toString()
 
+            //обрабатываем нажатие на элемент
             itemView.setOnClickListener {
                 val i = Intent(itemView.context as MainActivity, DescriptionActivity::class.java)
                 i.putExtra("name", item.name)
@@ -107,7 +106,6 @@ class MainActivity : AppCompatActivity() {
                 i.putExtra("img", item.image)
                 i.putExtra("ref", item.reference)
                 itemView.context.startActivity(i)
-                //startActivity(itemView.context, i, savedInstanceState)
             }
 
         }
